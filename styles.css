@@ -1,0 +1,296 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    /* transition: 0.5s cubic-bezier(1,-0.1, 0.71, 1); */
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0)) invert(1);
+    transform: scale(1.05);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+h1 {
+    transition-duration: 0.5s;
+    width: fit-content;
+    text-align: center;
+}
+
+h1:hover {
+    transform: scale(1.02);
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+}
+
+li {
+    font-size: 1.3em;
+    margin: 10px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    transition: all 0.3s;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: royalblue;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+#welcome {
+    font-size: 2.5em;
+    margin: 20px 10px 160px 10px;
+    user-select: none;
+}
+
+#date {
+    font-size: 2em;
+    margin: 10px;
+    user-select: none;
+}
+
+#time {
+    font-size: 8em;
+    margin: 10px;
+    user-select: none;
+}
+
+/* .shadow {
+    filter: drop-shadow(0 0 2px white);
+}
+
+.lightmode h1.shadow {
+    filter: drop-shadow(0 0 2px black);
+} */
+
+#lightModeButton {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    padding: 16px;
+    background-size: cover;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+#fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 15px;
+    background-size: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid white;
+}
+
+.light-mode #lightModeButton:hover {
+    filter: drop-shadow(0 0 5px black) invert(1);
+}
+
+#login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    margin-right: 60px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 1px solid;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    user-select: none;
+    transition: 0.3s;
+}
+
+#header {
+    width: 70%;
+    height: fit-content;
+}
+
+#inputTitle {
+    width: 60%;
+    height: 30px;
+    outline: none;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#add {
+    margin: 0px 0px 0px 10px;
+    width: 10%;
+    display: inline-block;
+    padding: 11px;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    user-select: none;
+    border: 1px solid;
+}
+
+#add:hover {
+    transform: scale(1.05);
+    filter: invert(1);
+}
+
+#add:active {
+    transition-duration: 0.05s;
+    transform: scale(1.1);
+}
+
+#version {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+}
+
+#versions-container {
+    padding-left: 100px;
+}
+
+#versions-container h2 {
+    margin-bottom: 5px;
+}
+
+#versions-container h3 {
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+#versions-container p {
+    margin: 5px;
+    margin-left: 20px;
+}
+
+#return {
+    font-size: 0.8em;
+}
+
+#todo {
+    display: inline-block;
+    width: 60%;
+    margin-top: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.seperator {
+    margin: 150px 0px;
+}
+
+.light-mode {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.dark-mode-img {
+    background: black url(images/dark.png);
+    border: 1px solid white;
+}
+
+.light-mode-img {
+    background: #ffffff url(images/light.png);
+    border: 1px solid black;
+}
+
+.fullscreen {
+    background: black url(images/fullscreen.png);
+}
+
+.exitfullscreen {
+    background: white url(images/exitfullscreen.png);
+}
+
+.ui-widget-header {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+    font-size: large;
+    font-weight: bold;
+    cursor: move;
+}
+
+.ui-widget-content {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+    margin-top: 10px;
+}
+
+.ui-button {
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    transition: 0.3s;
+    border-radius: 5px;
+    user-select: none;
+    border: 1px solid;
+    margin-left: 191px;
+}
+
+.title {
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.remove-button {
+    padding: 5px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgb(200, 200, 200) url(images/remove.png);
+    text-align: right;
+}
+
+.remove-button:hover {
+    background-color: rgb(255, 0, 0);
+    filter: none;
+    color: white;
+    border-radius: 5px;
+}
