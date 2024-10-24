@@ -36,6 +36,8 @@ li {
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
 }
 
 a {
@@ -111,9 +113,9 @@ a:hover {
 #login {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     margin: 20px;
-    margin-right: 60px;
+    margin-left: 10px;
     border-radius: 10px;
     padding: 5px 20px;
     border: 1px solid;
@@ -281,15 +283,35 @@ a:hover {
 .remove-button {
     padding: 5px;
     border: none;
+    background-color: lightcoral;
     color: black;
     cursor: pointer;
     border-radius: 5px;
-    background: rgb(200, 200, 200) url(images/remove.png);
+    /* background: rgb(200, 200, 200) url(images/remove.png); */
     text-align: right;
 }
 
 .remove-button:hover {
     background-color: rgb(255, 0, 0);
+    filter: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.edit-button {
+    background-color: lightskyblue;
+    padding: 5px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    /* background: rgb(200, 200, 200) url(images/remove.png); */
+    text-align: right;
+    margin-right: 10px;
+}
+
+.edit-button:hover {
+    background-color: deepskyblue;
     filter: none;
     color: white;
     border-radius: 5px;

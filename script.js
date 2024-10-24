@@ -16,7 +16,6 @@ function toggleDarkMode() {
 
 function login() {
     throwError("notDeveloped");
-    
 }
 
 // get current date
@@ -122,20 +121,49 @@ function add() {
 
 function createTodoItem(text) {
     const newElement = document.createElement("li");
-    newElement.textContent = text;
+    
+    // Create text node for the to-do item text
+    const textNode = document.createElement("span");
+    textNode.textContent = text;
 
+    // Create a container for the buttons
+    const buttonContainer = document.createElement("div");
+    buttonContainer.classList.add("button-container");
+
+    // Remove button
     const removeButton = document.createElement("button");
     removeButton.classList.add("remove-button");
     removeButton.textContent = "Remove";
     removeButton.onclick = function () {
         let confirmation = confirm("Are you sure?");
-        if (confirmation) newElement.remove(); saveTodoItems(); // Update localStorage
-        return;
+        if (confirmation) {
+            newElement.remove();
+            saveTodoItems(); // Update localStorage after removing an item
+        }
     };
 
-    newElement.appendChild(removeButton);
+    // Edit button
+    const editButton = document.createElement("button");
+    editButton.classList.add("edit-button");
+    editButton.textContent = "Edit";
+    editButton.onclick = function () {
+        const newText = prompt("Edit your item:", textNode.textContent);
+        if (newText != null && newText.trim() != "") {
+            textNode.textContent = newText;
+            saveTodoItems(); // Update localStorage after editing an item
+        }
+    };
+
+    // Append buttons to the button container
+    buttonContainer.appendChild(editButton);
+    buttonContainer.appendChild(removeButton);
+
+    // Append the text and button container to the list item
+    newElement.appendChild(textNode);
+    newElement.appendChild(buttonContainer);
+
     return newElement;
-}
+};//
 
 // Load to-do list items from localStorage
 function loadTodoItems() {
