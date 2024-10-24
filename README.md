@@ -1,7 +1,6 @@
 Visit https://sbrothers7.github.io/Listify/ for latest release
 
-
-
+============================================================================
 
 Note: You may need to either:
 1. Erase cached files for the website, or
