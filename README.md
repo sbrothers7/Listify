@@ -11,9 +11,8 @@ for changes to apply.
 
 
 If you're using Chrome:
-CMD + , on mac
-CTRL + , on windows
-search for "Delete browsing data" in settings
-Uncheck all boxes except "Cached images and files" and click on "Delete data"
 
-The page should load correctly with the current version.
+1. CMD + , on mac or CTRL + , on windows
+2. search for "Delete browsing data" in settings
+3. Uncheck all boxes except "Cached images and files" and click on "Delete data"
+4. The page should load correctly with the current version.
