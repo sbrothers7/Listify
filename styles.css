@@ -37,7 +37,22 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    transition: background-color 0.3s;
+    transition: 0.1s;
+}
+
+li:hover {
     border-bottom: 1px solid #ccc;
+    background-color: #202020;
+}
+
+body.light-mode li:hover {
+    border-bottom: 1px solid #2c2c2c;
+    background-color: #e0e0e0;
+}
+
+li:hover .button-container {
+    opacity: 1; /* Show buttons when hovering over the list item */
 }
 
 a {
@@ -307,7 +322,6 @@ a:hover {
     border-radius: 5px;
     /* background: rgb(200, 200, 200) url(images/remove.png); */
     text-align: right;
-    margin-right: 10px;
 }
 
 .edit-button:hover {
@@ -315,4 +329,11 @@ a:hover {
     filter: none;
     color: white;
     border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }

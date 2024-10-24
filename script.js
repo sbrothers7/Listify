@@ -1,3 +1,14 @@
+/* 
+To do:
+1. Add edit options (name, urgency, est time, etc)
+2. Drag to change order
+3. Add settings button and menu 
+    - Notifications when due date near
+    - 
+4. Login & server connection
+5. Auto schedule
+*/
+
 // =============================== Functions with Asthetic Purposes & Etc ===============================
 
 function toggleDarkMode() {
