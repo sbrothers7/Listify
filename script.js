@@ -23,6 +23,14 @@ function toggleDarkMode() {
 
     button.classList.toggle("dark-mode-img");
     button.classList.toggle("light-mode-img");
+    /*
+    // Trigger the expanding effect
+    button.classList.add("active");
+
+    // Remove the "active" class after the animation completes
+    setTimeout(() => {
+        button.classList.remove("active");
+    }, 500); // Match the transition duration in the CSS (1s)*/
 };
 
 function login() {
