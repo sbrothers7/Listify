@@ -117,6 +117,34 @@ const throwError = function (type) {
     }
 }
 
+document.addEventListener('mousemove', (event) => {
+    const targets = document.querySelectorAll('.hover-target');
+
+    document.addEventListener('mousemove', (event) => {
+        targets.forEach((target) => {
+        const rect = target.getBoundingClientRect(); // Get element's position and size
+
+        // Calculate the center of the element
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        // Calculate distance between the cursor and the element's center
+        const distance = Math.sqrt(
+            Math.pow(event.clientX - centerX, 2) + Math.pow(event.clientY - centerY, 2)
+        );
+
+        // Show or hide the element based on proximity
+        const proximityThreshold = 100; // Change this value to adjust sensitivity
+        if (distance < proximityThreshold) {
+            target.classList.add('visible');
+        } 
+        else {
+            target.classList.remove('visible');
+        }
+        });
+    });
+});
+
 // =========================================== Main Functions ===========================================
 
 document.addEventListener("DOMContentLoaded", loadTodoItems); // Listen for page load

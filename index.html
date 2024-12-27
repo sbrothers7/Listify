@@ -7,21 +7,20 @@
         <title>Listify</title>
     </head>
     <body>
-        <button id="lightModeButton" onclick="toggleDarkMode()" class="light-mode-img"></button>
-        <button id="login" onclick="login()">Log In</button>
-        <button id="fullscreen" onclick="fullScreen()" class="fullscreen"></button>
+        <button id="lightModeButton" onclick="toggleDarkMode()" class="light-mode-img hover-target"></button>
+        <button id="login" onclick="login()" class="hover-target">Log In</button>
+        <button id="fullscreen" onclick="fullScreen()" class="fullscreen hover-target"></button>
         <center>
-            <h1 id="welcome" class="shadow">Hello, User.</h1>
+            <!-- <h1 id="welcome" class="shadow">Hello, User.</h1> -->
+            <div class="separator"></div>
             <h1 id="date" class="shadow">Fetching date...</h1>
             <h1 id="time" class="shadow">Fetching time...</h1>
-
-            <div class="seperator"></div>
-            
-            <div id="header">
-                <input type="text" id="inputTitle" placeholder="Title...">
-                <span onclick="add()" id="add">Add</span>
-            </div>
         </center>
+        <div id="header">
+            <input type="text" id="inputTitle" placeholder="Title...">
+            <span onclick="add()" id="add">Add</span>
+        </div>
+
         <ul id="todo"></ul>
 
         <div id="notDeveloped" title="Error">
@@ -32,10 +31,9 @@
             <p style="display: none;" id="NIMessage">You must input a value!</p>
         </div>
 
-        <i><p id="version"><a href="version_history.html">v0.4a (pre-release 24-14a)</a></p></i>
-
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
-        <script type="text/javascript" src="script.js"></script>
+        <i><p id="version" class="hover-target"><a href="version_history.html">v0.4a (pre-release 24-15a)</a></p></i>
     </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </html>
